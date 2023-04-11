@@ -44,3 +44,48 @@
         -s 创建符号链接
 
 ```
+
+## 1.6. mv
+
+```mathematica
+    mv 移动文件或目录, 以及重命名 
+```
+
+## 1.7. rm
+
+```mathematica
+    rm 删除文件或目录
+        -i 询问是否要删除该文件
+        -r 递归删除整个目录
+        -f 强制删除
+    常用命令:
+        rm -rfi 删除整个目录(必须带上询问)
+
+```
+
+## 1.8. mkdir
+
+```mathematica
+    mkdir 创建目录
+        -p 批量地创建目录和子目录
+```
+
+## 1.9. rmdir
+
+```mathematica
+    rmdir 删除目录(默认只能删除空目录)
+```
+
+## 1.10. file
+
+```mathematica
+    file 探测文件的内部并判断文件类型
+```
+
+## 1.11. cat
+
+```mathematica
+    cat 显示文本文件
+        -n 带上行号显示
+        -b 对非空输出行编号
+```
