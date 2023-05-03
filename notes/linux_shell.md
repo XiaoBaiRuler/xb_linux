@@ -48,6 +48,13 @@ alias(内部命令): 允许为常用命令及其参数创建一个名称
 用户自定义变量:(默认小写)
     a="hello world";
     echo $a;
+
+删除环境变量: 不能使用$;
+    unset name 如果是全局环境变量，仅对子进程有效
+
+环境变量持久化:
+    1. 在/etc/profile.d目录中创建一个.sh结尾的文件, 把新的或修改过的全局环境变量设置放里面
+    2. 对于个人用户的永久变量，设置在$HOME/.bashrc
 ```
 
 ## 2. 后台模式
@@ -63,3 +70,25 @@ alias(内部命令): 允许为常用命令及其参数创建一个名称
     coproc sleep 10;
     coproc my_job { sleep 10; } 扩展语法: {} 里面前后必须有空格
 ```
+
+## 4. 登录shell
+
+五个启动文件:
+
+1. /etc/profile 主启动文件
+
+2. $HOME/.bash_profile
+
+3. $HOME/.bashrc 启动交换shell时执行, 加别名和脚本函数
+
+4. $HOME/.bash_login
+
+5. $HOME/.profile
+
+## 5. 交互式shell
+
+<mark> 不处理./etc/profile文件，启动$HOME目录中的.bashrc文件 </mark>
+
+## 6. 非交互式shell
+
+<mark>处理$BASH_ENV环境变量包含的启动文件</mark>
